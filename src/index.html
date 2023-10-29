@@ -3,10 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Itprofit</title>
   </head>
   <body>
-    <div>Hello webpack!</div>
-    <p>world</p>
+    <body>
+      <div class="banner">
+        <h1>Contact Us</h1>
+
+        <p class="banner__description">
+          We'd really love to hear from you! Please fill in the form below and
+          submit
+        </p>
+      </div>
+
+      <form class="form" id="form" name="contact-form">
+        <div class="form__control">
+          <label>Name</label>
+          <input id="name" name="name" placeholder="Your Name" />
+          <div class="error hide">Name is required</div>
+        </div>
+
+        <div class="form__control">
+          <label>Email</label>
+          <input
+            id="email"
+            name="email"
+            placeholder="e.g. your_email@example.com"
+          />
+          <div class="error hide">Email is invalid</div>
+        </div>
+
+        <div class="form__control">
+          <label>Phone</label>
+          <input id="phone" name="phone" placeholder="+375(00)000-00-00" />
+          <div class="error hide">Phone is invalid</div>
+        </div>
+
+        <div class="form__control">
+          <label>Message</label>
+          <textarea id="text" name="message"></textarea>
+          <div class="error hide">Message is required</div>
+        </div>
+        <hr />
+        <button type="submit">SUBMIT FORM</button>
+      </form>
+
+      <button class="modal-btn">SHOW MODAL</button>
+
+      <div class="modal">
+        <div class="modal__dialog">
+          <div class="modal__content">
+            <div data-close class="modal__close">&times;</div>
+            <div class="modal__text"></div>
+          </div>
+        </div>
+      </div>
+    </body>
   </body>
 </html>

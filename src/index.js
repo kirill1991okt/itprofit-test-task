@@ -1,7 +1,10 @@
-import './styles.scss';
+import './modules/submitForm';
+import './modules/modal';
+import IMask from 'imask';
 
-function component() {
-  console.log('Hello!');
-}
+import './index.scss';
 
-component();
+IMask(document.getElementById('phone'), {
+  mask: '+{375}(00)000-00-00',
+  lazy: false,
+});

@@ -16,13 +16,20 @@ module.exports = {
     assetModuleFilename: 'assets/[hash][ext][query]',
     clean: true,
   },
+  devServer: {
+    open: true,
+    static: {
+      directory: './src',
+      watch: true,
+    },
+  },
   devtool: 'source-map',
   plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src', 'index.html'),
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/index.html',
     }),
   ],
   module: {
